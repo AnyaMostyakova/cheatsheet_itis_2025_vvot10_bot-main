@@ -1,0 +1,11 @@
+runtime: python311
+entrypoint: main.webhook
+memory: 256MB
+execution_timeout: 30s
+service_account_id: auto
+environment:
+  TG_BOT_TOKEN: ${tg_bot_token}
+  YC_FOLDER_ID: ${folder_id}
+  YC_API_KEY: ${api_key}
+  BUCKET_NAME: ${bucket_name}
+  INSTRUCTION_OBJECT_KEY: gpt_instruction.txt
